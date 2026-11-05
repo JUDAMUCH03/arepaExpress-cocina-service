@@ -24,7 +24,7 @@ public class RabbitConfig {
 
     @Bean
     public Binding binding(Queue cola, TopicExchange arepasExchange) {
-        return BindingBuilder.bind(cola).to(arepasExchange).with("pedido.*");
+        return BindingBuilder.bind(cola).to(arepasExchange).with("pedido.creado");
     }
 
     @Bean
